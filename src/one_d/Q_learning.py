@@ -51,3 +51,15 @@ plt.xlabel("Episode")
 plt.ylabel("Return")
 plt.title("Q-learning in 1D World")
 plt.show()
+
+# Use the learned policy
+
+state, info = env.reset()
+done = False
+env.render()
+while not done:
+    action = int(np.argmax(Q[state]))
+    next_state, reward, terminated, truncated, info = env.step(action)
+    env.render()
+    state = next_state
+    done = terminated or truncated
