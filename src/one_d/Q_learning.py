@@ -4,7 +4,7 @@ import numpy as np
 
 from OneDWorldEnv import OneDWorldEnv
 
-env = OneDWorldEnv(length=50, max_steps=100)
+env = OneDWorldEnv()
 
 n_states = env.observation_space.n
 n_actions = env.action_space.n
@@ -14,8 +14,8 @@ Q = np.zeros((n_states, n_actions))
 
 alpha = 0.1      # learning rate
 gamma = 0.99     # discount factor
-epsilon = 0.2    # exploration rate
-n_episodes = 500
+epsilon = 0.05    # exploration rate
+n_episodes = 100
 
 episode_returns = []
 
