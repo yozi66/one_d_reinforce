@@ -1,6 +1,11 @@
 Simple one-dimension reinforcement learning
 ===========================================
 
+Theory: [Math](Math.md)
+
+Code
+----
+
 Super-simple Gymnasium: line of cells, agent walks from left to right.
 
 Reward is 1 for reaching the rightmost position. Reward for not reaching is -0.01
