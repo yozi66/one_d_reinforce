@@ -111,3 +111,8 @@ The value (the brain of the Critic) is a neural network (with $\theta$ weights) 
 ```math
 V_{\theta}(s)
 ```
+
+PPO always collects a fresh batch of experience using a frozen snapshot of the current policy, 
+reuses that batch for several gradient updates (to adjust the weights of the model) 
+and then discards it before collecting new data.
+PPO limits the influence of each sample (state and action) on the policy update (clipping) which stabilizes training.
