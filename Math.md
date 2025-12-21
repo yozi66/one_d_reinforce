@@ -92,3 +92,22 @@ Not all weights are equal. Some weights in your network might need to change a l
 * **Adam:** Tracks how much each weight has been changing (the **Second Moment** or variance).
   * If a weight is getting huge, frequent updates, Adam slows it down.
   * If a weight is barely moving, Adam speeds it up.
+
+PPO learning
+------------
+
+Proximal Policy Optimization (PPO) is an **actor-critic** algorithm.
+* **Actor** -> decides what action to take
+* **Critic** -> estimates how good the state is
+
+The policy (the brain of the Actor) is a neural network (with $\theta$ weights) that gives the probability of action $a$ in state $s$. It is analogous to the Q-table or the Q-network in DQN:
+
+```math
+\pi_{\theta}( a | s)
+```
+
+The value (the brain of the Critic) is a neural network (with $\theta$ weights) that gives the value of a state:
+
+```math
+V_{\theta}(s)
+```
